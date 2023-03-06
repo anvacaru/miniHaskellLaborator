@@ -68,7 +68,7 @@ basicExp = undefined
 expr :: Parser ComplexExp
 expr = varExp
 -- >>> testParse expr "\\x -> [x,y,z]"
-CLam (Var {getVar = "x"}) (List [CX (Var {getVar = "x"}),CX (Var {getVar = "y"}),CX (Var {getVar = "z"})])
+-- CLam (Var {getVar = "x"}) (List [CX (Var {getVar = "x"}),CX (Var {getVar = "y"}),CX (Var {getVar = "z"})])
 
 exprParser :: Parser ComplexExp
 exprParser = whiteSpace miniHs *> expr
