@@ -88,7 +88,7 @@ parenExp = undefined
 basicExp :: Parser ComplexExp
 basicExp = letrecExp
        <|> letExp
-       <|> lambeExp
+       <|> lambdaExp
        <|> varExp
        <|> listExp
        <|> natExp
