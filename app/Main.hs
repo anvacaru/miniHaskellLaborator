@@ -6,6 +6,8 @@ import System.Console.Isocline
 
 import Exp
 import Parsing
+import Eval
+import Sugar
 import Printing
 import REPLCommand
 import Text.ParserCombinators.Parsec(parse)
@@ -22,6 +24,5 @@ main = do
                     Eval l -> case parse exprParser "<input>" l of
                         Left err -> print err >> main
                         Right c -> putStrLn ( showExp c ) >> main
-                        
 
 
